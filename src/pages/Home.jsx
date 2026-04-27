@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import './Base.css';
 import './Home.css';
-import geodataBanner from '../assets/images/banner.png';
+import geodataBanner from '../assets/images/members/banner.png';
 import UpcomingEvents from '../components/UpcomingEvents.jsx';
 export default function Home(){
 

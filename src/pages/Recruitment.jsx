@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Base.css';
 import './Recruitment.css';
-import teamPhoto from '../assets/images/teamphoto.png';
+import teamPhoto from '../assets/images/members/teamphoto.png';
 
 function FAQItem({ question, children }) {
   const [open, setOpen] = useState(false);

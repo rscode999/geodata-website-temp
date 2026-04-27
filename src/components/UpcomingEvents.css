@@ -47,7 +47,7 @@
     opacity: 90%;
     background-position: top;
     z-index: 1;
-    background-image: url('../assets/images/mountains.png');
+    background-image: url('../assets/images/members/mountains.png');
     background-repeat: repeat-x;
     background-size: auto 100px;
 }

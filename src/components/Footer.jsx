@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import instagram from '../assets/images/instagram.png';
-import linkedIn from '../assets/images/linkedin.png';
+import instagram from '../assets/images/members/instagram.png';
+import linkedIn from '../assets/images/members/linkedin.png';
 
 const Footer = () =>{
     return(
@@ -21,7 +21,7 @@ const Footer = () =>{
                     </a>
                 </li>
                 <li>
-                    <p>do we have an email</p>
+                    <a href={"mailto:cugeodata@cornell.edu"}>cugeodata@cornell.edu</a>
                 </li>
             </ul>
             <p>Registered Student Organization of Cornell University</p>

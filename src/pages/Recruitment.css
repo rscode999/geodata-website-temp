@@ -13,7 +13,7 @@
     min-height: 914px;
     display: inline-block;
     background-position: top;
-    background-image: url('../assets/images/teamphoto_resized.png');
+    background-image: url('../assets/images/members/teamphoto_resized.png');
     background-repeat: no-repeat;
     /*somehow i don't think background works with auto... 
     or rather it won't resize for the background. 

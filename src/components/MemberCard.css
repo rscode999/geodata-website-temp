@@ -13,6 +13,7 @@
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
+
 @media (hover : hover) and (pointer : fine) {
   .member-card:hover {
     transform: scale(1.02);
@@ -91,10 +92,46 @@
 
 .member-card_coffee-chat{
     font-family:'Inter', sans-serif;
-    font-Style: italic;
+    font-style: italic;
     cursor: pointer;
     padding: 3px;
     border: 2px ridge rgba(21, 45, 37, 0.85);
     background-color: rgba(0, 0, 0, 0.10);
 
+}
+
+
+.project-card {
+  /* 100% width of parent but width should never exceed 280px */
+  width: 100%;
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+
+.project-card__photo-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 12px auto;
+}
+
+.project-card__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card__description {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0 10px 20px 10px;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.5px;
 }
