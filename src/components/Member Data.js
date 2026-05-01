@@ -3,6 +3,7 @@ import williamHeadshot from '../assets/images/members/william_leung_headshot.png
 import orionHeadshot from '../assets/images/members/orion_hoch_headshot.jpeg'
 import lorraineHeadshot from '../assets/images/members/lorraine_yang_headshot.JPG'
 import annikaHeadshot from '../assets/images/members/annika_malhotra_headshot.png'
+import shubtaHeadshot from '../assets/images/members/shubta_gautam_headshot.png'
 import reeceHeadshot from '../assets/images/members/reece_shiraishi_headshot.jpeg'
 import nawalHeadshot from '../assets/images/members/nawal_bhatti_headshot.jpg'
 import michelleHeadshot from '../assets/images/members/michelle_zhao_headshot.jpeg'
@@ -92,7 +93,7 @@ const teamMembers = [{
         role: 'Water Team Member',
         netid: 'dag374',
         photo: defaultPhoto,
-        bio: 'Duke is currently on the water subteam working to analyze sap flux in trees. Aside from GeoData, he is involved in Cornell running club and likes to explore the Ithaca and Cornell area.',
+        bio: 'Duke is currently on the water subteam working to analyze sap flux in trees. Aside from GeoData, he is involved in the Cornell Running Club and likes to explore the Ithaca and Cornell area.',
         coffee: true
     },
     {
@@ -109,7 +110,7 @@ const teamMembers = [{
         name: 'Shubha Gautam',
         role: '',
         netid: 'sg2563',
-        photo: defaultPhoto,
+        photo: shubtaHeadshot,
         bio: 'Shubha is new to GeoData, but aside from the team, she\'s involved with Cornell YDSA and The Daily Sun. In my free time, you can find her reading anti-westerns or exploring Ithaca! She\'s from Missouri and often miss living 10 minutes from the Missouri River.',
         coffee: false
     },
@@ -119,16 +120,16 @@ const teamMembers = [{
         role: '',
         netid: 'nb625',
         photo: nawalHeadshot,
-        bio: 'Nawal Bhatti is a senior majoring in Information Science with a minor in Business. As part of her CU GeoData subteam, she contributes to the development of drones for data collection and the creation of continuous temperature probes and sensors for Cayuga Lake. ',
+        bio: 'Nawal Bhatti is a senior majoring in Information Science with a minor in Business. As part of her CU GeoData subteam, she contributes to the development of drones for data collection and the creation of continuous temperature probes and sensors for Cayuga Lake.',
         coffee: true
     },
     {
         id: 13,
         name: 'Reece Shiraishi',
-        role: '',
+        role: 'Business Team Member',
         netid: 'rcs374',
-        photo: reeceHeadshot,
-        bio: 'A junior in ECE, Reece is involved in Cornell IEEE and the pickleball club. He enjoys weightlifting, coding, and eating the cinnamon twists in the dining halls.',
+        photo: gigachadHeadshot,
+        bio: 'Reece is a total gigachad.',//'Reece (class of 2027, ECE) is involved in IEEE and Cornell Entertainment Engineering and Design. He enjoys weightlifting, coding, and eating bacon omelets in Morrison Dining.',
         coffee: false
     },
     {
@@ -166,15 +167,6 @@ const teamMembers = [{
         photo: nehaHeadshot,
         bio: '',
         coffee: true
-    },
-    {
-        id: 18,
-        name: 'Reece Shiraishi',
-        role: 'Business Team Member',
-        netid: '',
-        photo: gigachadHeadshot,
-        bio: "That's right, I'm a gigachad.",
-        coffee: false
     },
 ];
 
