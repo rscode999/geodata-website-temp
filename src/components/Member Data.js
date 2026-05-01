@@ -12,7 +12,7 @@ import nickHeadshot from '../assets/images/members/nick_spoto_headshot.jpg'
 import nehaHeadshot from '../assets/images/members/neha_sudarshan_headshot.JPG'
 import alecHeadshot from '../assets/images/members/alec_daveynis_headshot.png'
 import ayaHeadshot from '../assets/images/members/aya_saute_headshot.JPG'
-
+import gigachadHeadshot from '../assets/images/members/gigachad.png'
 
 const teamMembers = [{
         id: 1,
@@ -166,6 +166,15 @@ const teamMembers = [{
         photo: nehaHeadshot,
         bio: '',
         coffee: true
+    },
+    {
+        id: 18,
+        name: 'Reece Shiraishi',
+        role: 'Business Team Member',
+        netid: '',
+        photo: gigachadHeadshot,
+        bio: "That's right, I'm a gigachad.",
+        coffee: false
     },
 ];
 

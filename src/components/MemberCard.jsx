@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import './MemberCard.css';
 
-const MemberCard = ({ id, name, role, photo, bio, netid, isActive, onActivate }) => {
+const MemberCard = ({ id, name, role, photo, bio, netid, coffee, isActive, onActivate }) => {
   const [isHovered, setIsHovered] = useState(false);
   const isTouchDevice = typeof window !== 'undefined' && window.matchMedia("(pointer: coarse)").matches;
 
@@ -19,6 +19,13 @@ const MemberCard = ({ id, name, role, photo, bio, netid, isActive, onActivate })
 
   const showOverlay = isActive || (!isTouchDevice && isHovered);
 
+  //Conditional rendering of coffee chat button
+  const coffeeChatButton = (coffee)
+      ? <p className = "member-card__contact"> <a href={`mailto:${netid ? `${netid}@cornell.edu` : ''}?subject=${encodeURIComponent('Coffee Chat Request')}&body=${encodeURIComponent(`Hello ${name || ''},\n\nI am interested in learning about GeoData! Would you be free sometime for a quick coffee chat?\n\nBest,\n[enter your name]`)}`}
+                                                  className="member-card_coffee-chat">
+          Coffee Chat </a> </p>
+      : <p className = "member-card__contact">Hello!</p>;
+
   return (
     <div className = "member-card" {...eventHandlers}>
       <div className = "member-card__photo-wrapper">
@@ -34,9 +41,8 @@ const MemberCard = ({ id, name, role, photo, bio, netid, isActive, onActivate })
       <div className = "member-card__content">
         <p className = "member-card__name">{name}</p>
         <p className = "member-card__role">{role}</p>
-       <p className = "member-card__contact"> <a href={`mailto:${netid ? `${netid}@cornell.edu` : ''}?subject=${encodeURIComponent('Coffee Chat Request')}&body=${encodeURIComponent(`Hello ${name || ''},\n\nI am interested in learning about geodata! Would you be free sometime for a quick coffee chat?\n\nBest,\n[enter your name]`)}`}
-              className="member-card_coffee-chat">
-               Coffee Chat </a> </p>
+
+        <p>{coffeeChatButton}</p>
       </div>
     </div>
   );
