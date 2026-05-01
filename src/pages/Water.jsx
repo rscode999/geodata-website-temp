@@ -20,7 +20,7 @@ export default function Water(){
                         .map(project => (
                             <ProjectCard
                                 key={project.id}
-                                projectName={project.projectName}
+                                projectName={project.title}
                                 description={project.description}
                             />
                         ))}

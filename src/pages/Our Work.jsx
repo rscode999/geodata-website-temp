@@ -71,7 +71,7 @@ export default function Our_Work() {
                             <ProjectCard
                                 id={proj.id}
                                 team={proj.team}
-                                projectName={proj.projectName}
+                                title={proj.title}
                                 photo={proj.photo}
                                 description={proj.description}
                             />
