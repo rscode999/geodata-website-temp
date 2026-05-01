@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import './MemberCard.css';
+import './ProjectCard.css';
 
 const ProjectCard = ({ id, team, title, description, photo }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -20,9 +20,9 @@ const ProjectCard = ({ id, team, title, description, photo }) => {
     return (
         <div className = "project-card" {...eventHandlers}>
 
-            <div className = "member-card__content">
-                <p className = "member-card__name">{title}</p>
-                <p className = "member-card__role">{team}</p>
+            <div>
+                <p className = "project-card__name">{title}</p>
+                <p className = "project-card__team">{team}</p>
             </div>
 
             <div className = "project-card__photo-wrapper">

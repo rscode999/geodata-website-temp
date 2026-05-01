@@ -145,7 +145,7 @@ const teamMembers = [{
         id: 15,
         name: 'Alec Daveynis',
         role: 'Data Team Member',
-        netid: '',
+        netid: 'ald242',
         photo: alecHeadshot,
         bio: '',
         coffee: true
@@ -154,7 +154,7 @@ const teamMembers = [{
         id: 16,
         name: 'Aya Saute',
         role: 'Rock Team Lead',
-        netid: '',
+        netid: 'acs373',
         photo: ayaHeadshot,
         bio: '',
         coffee: true
@@ -163,7 +163,7 @@ const teamMembers = [{
         id: 17,
         name: 'Neha Sudarshan',
         role: 'Tech Team Member',
-        netid: '',
+        netid: 'ns968',
         photo: nehaHeadshot,
         bio: '',
         coffee: true

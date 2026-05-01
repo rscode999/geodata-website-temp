@@ -19,9 +19,11 @@ export default function Water(){
                         .filter(project => project.team === 'Water')
                         .map(project => (
                             <ProjectCard
-                                key={project.id}
+                                id={project.id}
+                                title={project.title}
                                 projectName={project.title}
                                 description={project.description}
+                                photo={project.photo}
                             />
                         ))}
                 </div>

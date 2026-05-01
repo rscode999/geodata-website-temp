@@ -1,15 +1,12 @@
-.teamContainerRef{
+.projectContainerRef{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     gap: 4rem;
     padding-block: 2rem;
     background-color: #D9EAFD;
 }
 
-.member-cards{
+.project-cards{
     padding-bottom: 5rem;
 }
 

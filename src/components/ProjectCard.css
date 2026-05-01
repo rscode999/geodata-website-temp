@@ -1,11 +1,49 @@
 .project-card {
     width: 100%;
-    max-width: 880px;
-    margin: auto;
-    background-color: green;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin-bottom:16px;
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
+
+.project-card__name {
+    font-family: 'Lora', serif;
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+    font-weight: 600;
+    margin: 0 0 2px 0;
+}
+
+.project-card__team {
+    font-family: 'Inter', sans-serif;
+    color: #086a49;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card__photo-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 12px auto;
+}
+
+.project-card__photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card__description {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0 10px 20px 10px;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
