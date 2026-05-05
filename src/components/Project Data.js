@@ -5,14 +5,14 @@ import tethersonde from '../assets/images/projects/tethersonde.png'
 const projects = [
     {
         id: 1,
-        team: "Water",
+        subteam: "Water",
         title: "Cayuga Lake Buoy",
         description: "We put a buoy in Cayuga Lake and collected data from it",
         photo: defaultPhoto
     },
     {
         id:2,
-        team:"Air, Tech",
+        subteam:"Air, Tech",
         title:"Tethersonde",
         description:"The tethersonde balloon project involves using tethersondes —  radiosondes fixed to tethered balloons that move vertically up or down  at a fixed location — to measure upper air atmospheric data for the  Finger Lakes region. These soundings of the atmosphere will allow for a  more comprehensive understanding of the impacts of variable surface  friction on different atmospheric variables. This will improve weather  forecasting in Ithaca and the Finger Lakes region." +
         "The balloon will help to predict meteorological events such as wind  gust and precipitation type forecasts. Since the nearest regular  vertical sounding station, via weather balloon radiosonde, is located in  Buffalo, NY, there is a lack of accurate weather information of this  type for Ithaca. Not only can atmospheric conditions vary dramatically  in the distance between Ithaca and Buffalo, the influence that  topographical features such as the gorges, ridges, creeks and lakes that  make up Tompkins County cannot be demonstrated by soundings taken in  Buffalo. Measuring the local low-level environment in a variety of  conditions is scientifically important to understand how the near-Ithaca  boundary layer differs from that measured by the regular soundings of  Buffalo, aiding Ithaca area forecasting and scientific interests." +
@@ -22,14 +22,14 @@ const projects = [
     },
     {
         id:3,
-        team:"Data",
+        subteam:"Data",
         title:"Sensor Network Integration",
         description:"Fully automated data collection pipeline",
         photo: defaultPhoto
     },
     {
         id:4,
-        team:"Business",
+        subteam:"Business",
         title:"The Business Team ReactJS Adventure™️",
         description:"It all started when Data Team asked the Business Team to help out on the website. " +
             "There was only one problem: out of the 4 members on Business at the time, two of them have " +

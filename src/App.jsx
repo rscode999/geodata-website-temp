@@ -9,11 +9,13 @@ import Donate from './pages/Donate.jsx'
 import FingerLakes from './pages/FingerLakes.jsx';
 import './App.css'
 import Layout from './components/Layout';
+import CurrentSensorData from './pages/CurrentSensorData.jsx';
 import Data from './pages/Data.jsx';
 import Water from './pages/Water.jsx';
 import Air from  './pages/Air.jsx';
 import Tech from './pages/Tech.jsx';
 import Rock from './pages/Rock.jsx';
+import Business from './pages/Business.jsx';
 import SnipeChallenge from './pages/SnipeChallenge.jsx';
 
 
@@ -32,11 +34,13 @@ function App() {
           <Route path="recruitment" element={<Recruitment />} />
           <Route path="members" element={<Members />} />
           <Route path="donate" element={<Donate />} />
+          <Route path="current-sensor-data" element={<CurrentSensorData />} />
           <Route path="data" element={<Data />} />
           <Route path="water" element={<Water />} />
           <Route path="air" element={<Air />} />
           <Route path="tech" element={<Tech />} />
           <Route path="rock" element={<Rock />} />
+          <Route path="business" element={<Business />} />
           <Route path="snipe-challenge" element={<SnipeChallenge/>} />
           <Route path="*" element={<Home />} />
         </Route>

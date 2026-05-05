@@ -1,7 +1,0 @@
-
-
-William Leung
-Data Team Co-Lead 
-import williamPhoto from '../assets/images/william.jpg';
-William is quite tired!
-

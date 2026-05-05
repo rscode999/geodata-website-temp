@@ -60,7 +60,7 @@ export default function Recruitment() {
           <div className='info-box'>
             <h1 className='titleHeader'>Recruitment</h1>
             <p>
-              Thank you for your interest in CU Geodata! We recently began our recruitment process for the Spring 2025 semester! Below you can find a link to our team application, which includes a set of short questions to learn more about you. We also hold{" "}
+              Thank you for your interest in CU Geodata! We recently began our recruitment process for the Fall 2026 semester! Below you can find a link to our team application, which includes a set of short questions to learn more about you. We also hold{" "}
               <a
                 href="https://docs.google.com/spreadsheets/d/1tklDgxedBnjQK8MM15cmxKWhptDZjEs686E5T4I5IoE/edit?gid=1607338661#gid=1607338661"
                 target="_blank"
@@ -95,12 +95,12 @@ export default function Recruitment() {
 
         <div className='info-box'>
           <h1 className='titleHeader'>FAQ's</h1>
-          <p>Here are some commonly asked questions about GeoData:</p>
+          <p>Here are some commonly asked questions about GeoData:</p><br/>
 
           <div className="faq-list">
             {faqs.map((item, idx) => (
               <FAQItem key={idx} question={item.q}>
-                <p>{item.a}</p>
+                <p>{item.a}</p><br/>
               </FAQItem>
             ))}
           </div>

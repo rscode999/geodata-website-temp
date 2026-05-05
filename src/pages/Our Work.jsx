@@ -8,31 +8,35 @@ export default function Our_Work() {
         document.title = `Our Work`;
     }, []);
 
+    const handleActivate = (memberId) => {
+        setActiveCardId(prevId => (prevId === memberId ? null : memberId));
+    };
+
+    const [activeCardId, setActiveCardId] = useState(null);
     const teamContainerRef = useRef(null);
 
     return (
-        <div>
-            <h1 className='titleHeader'>Current and Past Projects</h1>
-            <div className = "project-cards">
-
-                <div className= 'projectContainerRef' />
-                <div>
-                    {/* Display the projects if there are projects. Otherwise, display "No projects" */}
-                    {projectData.length > 0 ?
-                        projectData.map(proj => (
+        <div onClick={(e) => {
+            if (e.target === teamContainerRef.current) {
+                setActiveCardId(null);
+            }
+        }}>
+            <h1 className='titleHeader'>Current Projects</h1>
+            <div className = "member-cards">
+                <div className= 'teamContainerRef' >
+                    {projectData
+                        .map(proj => (
                             <ProjectCard
                                 id={proj.id}
-                                team={proj.team}
                                 title={proj.title}
+                                subteam={"Subteams: " + proj.subteam}
                                 photo={proj.photo}
                                 description={proj.description}
+                                isActive={activeCardId === proj.id}
+                                onActivate={handleActivate}
                             />
-                        ))
-                        :
-                        "No current projects"}
+                        ))}
                 </div>
-
-
             </div>
         </div>
     );

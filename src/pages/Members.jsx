@@ -74,6 +74,7 @@ export default function Members() {
             />
           ))}
         </div>
+        <br/>
         <h2 className = 'subheading'> Data Team </h2>
         <div className= 'teamContainerRef' >
           {chooseTeam(teamMembers, 'Data').map(member => (
@@ -92,7 +93,7 @@ export default function Members() {
             />
           ))}
         </div>
-
+        <br/>
         <h2 className = 'subheading'> Rock Team </h2>
           <div className= 'teamContainerRef' >
             {chooseTeam(teamMembers, 'Rock').map(member => (
@@ -111,6 +112,7 @@ export default function Members() {
               />
             ))}
         </div>
+        <br/>
         <h2 className = 'subheading'> Water Team </h2>
         <div className= 'teamContainerRef'>
           {chooseTeam(teamMembers, 'Water').map(member => (
@@ -129,7 +131,7 @@ export default function Members() {
             />
           ))}
         </div>
-
+        <br/>
         <h2 className = 'subheading'> Air Team </h2>
         <div className= 'teamContainerRef'>
           {teamMembers
@@ -150,6 +152,7 @@ export default function Members() {
             />
           ))}
         </div>
+        <br/>
         <h2 className = 'subheading'> Tech Team </h2>
         <div className= 'teamContainerRef' >
           {chooseTeam(teamMembers, 'Tech').map(member => (
@@ -168,6 +171,7 @@ export default function Members() {
             />
           ))}
         </div>
+        <br/>
         <h2 className = 'subheading'> Business Team </h2>
         <div className= 'teamContainerRef'>
           {chooseTeam(teamMembers, 'Business').map(member => (

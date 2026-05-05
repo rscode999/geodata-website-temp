@@ -20,7 +20,8 @@ const MemberCard = ({ id, name, role, photo, bio, netid, coffee, isActive, onAct
   const showOverlay = isActive || (!isTouchDevice && isHovered);
 
   //Conditional rendering of coffee chat button. Requires "coffee" to be true, and "netid" to be non-null or non-empty
-  const coffeeChatButton = (coffee && netid)
+  //Currently hard-coded to always render coffee chat button
+  const coffeeChatButton = (true)//(coffee && netid)
       ? <p className = "member-card__contact"> <a href={`mailto:${netid ? `${netid}@cornell.edu` : ''}?subject=${encodeURIComponent('Coffee Chat Request')}&body=${encodeURIComponent(`Hello ${name || ''},\n\nI am interested in learning about GeoData! Would you be free sometime for a quick coffee chat?\n\nBest,\n[enter your name]`)}`}
                                                   className="member-card_coffee-chat">
           Coffee Chat </a> </p>

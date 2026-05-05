@@ -54,7 +54,7 @@ const teamMembers = [{
     {
         id: 5,
         name: 'Annika Malhotra',
-        role: 'Business Team Member',
+        role: 'Business Team Lead',
         netid: 'am3359',
         photo: annikaHeadshot,
         bio: 'Annika is from New Jersey! She is a sophomore in the Engineering School with an intended major in Computer Science and ORIE with a minor in AI. She is treasurer of the Phi Sigma Pi Honors Fraternity on campus and part of the Alpha Chi Omega sorority. She is passionate about the crossover between business and technology. She likes to workout and hang out in nature!',
@@ -138,7 +138,7 @@ const teamMembers = [{
         role: 'Data Team Lead',
         netid: 'ra596',
         photo: rithyaHeadshot,
-        bio: 'Rithya enjoys space, audiobooks (about five months of listening time), and ice skating! Her toxic trait is thinking everywhere is in walking distance.',
+        bio: 'hello hello. im rithya! im so cute!!! (acutaly im delulu) my favoriet place on campus is the vet school because i had a hackathon there. youre welcome to talk to me about walker white, my favoroie prof!',//'Rithya enjoys space, audiobooks (about five months of listening time), and ice skating! Her toxic trait is thinking everywhere is in walking distance.',
         coffee: true
     },
     {

@@ -10,12 +10,6 @@
     object-fit: fill;
 }
 
-.home-text {
-    display: block;
-    text-align: left;
-    margin: 30px;
-}
-
 .upcoming-events{
     padding-block: 10px;
     height: 400px;

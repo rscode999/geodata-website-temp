@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import sponsorshipLevelsImg from '../assets/images/members/sponsorship_levels.png';
+import sponsorshipLevelsImg from '../assets/images/misc/sponsorship_levels.png';
 import './Donate.css'
 
 export default function Donate(){

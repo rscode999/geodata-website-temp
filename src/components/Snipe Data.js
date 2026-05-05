@@ -5,7 +5,7 @@ const snipes = [
         id: 1,
         title: "Statler Pwnage",
         sniper: "you know who",
-        description: "👀",
+        description: "i stole ur website too",
         photo: e
     },
 ];

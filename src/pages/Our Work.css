@@ -1,6 +1,9 @@
-.projectContainerRef{
+.projContainerRef{
     width: 100%;
-    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 4rem;
     padding-block: 2rem;
     background-color: #D9EAFD;
@@ -9,6 +12,7 @@
 .project-cards{
     padding-bottom: 5rem;
 }
+
 
 .subheading{
     font-family: 'Lora', serif;
