@@ -30,7 +30,7 @@ function App() {
           <Route path="our-work" element={<Our_Work />}>
             <Route path="finger-lakes" element={<FingerLakes />} />
           </Route>
-          <Route path="teams" element={<Teams />} />
+          <Route path="teams" element={<Air />} />
           <Route path="recruitment" element={<Recruitment />} />
           <Route path="members" element={<Members />} />
           <Route path="donate" element={<Donate />} />
@@ -41,7 +41,7 @@ function App() {
           <Route path="tech" element={<Tech />} />
           <Route path="rock" element={<Rock />} />
           <Route path="business" element={<Business />} />
-          <Route path="snipe-challenge" element={<SnipeChallenge/>} />
+          {/*<Route path="snipe-challenge" element={<SnipeChallenge/>} />*/}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

@@ -14,3 +14,42 @@
     padding-block: 10px;
     height: 400px;
 }
+
+.flex-row {
+    display: flex;
+    align-items: center; /* Vertically centers text with the image */
+    gap: 20px;           /* Space between the image and the text */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.text-content {
+    flex: 1;             /* Allows the text to fill the remaining space */
+}
+
+
+.custom-button {
+    /* Layout */
+    display: inline-block;
+    padding: 10px 25px;
+
+    /* Border & Shape */
+    border: 2px solid #5786b8;
+    border-radius: 5px;
+
+    /* Text Styling */
+    color: #78a6d3 !important;
+    text-decoration: none; /* Removes the default link underline */
+    font-weight: bold;
+    font-family: sans-serif;
+
+    /* Animation */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover State: Fills the button with color */
+.custom-button:hover {
+    background-color: #76a7dd;
+    color: white;
+}
