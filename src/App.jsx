@@ -15,6 +15,7 @@ import Air from  './pages/Air.jsx';
 import Tech from './pages/Tech.jsx';
 import Rock from './pages/Rock.jsx';
 import Business from './pages/Business.jsx';
+import MissionStatement from "./pages/MissionStatement.jsx";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route path="business" element={<Business />} />
           {/*<Route path="snipe-challenge" element={<SnipeChallenge/>} />*/}
           <Route path="*" element={<Home />} />
+          <Route path="mission-statement" element={<MissionStatement/>} />
         </Route>
       </Routes>
     </BrowserRouter>

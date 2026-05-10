@@ -13,9 +13,7 @@ import upcomingEventsData from "../components/Upcoming Events Data.js";
 export default function Home(){
 
   const[count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
 
-  const domRef = useRef();
   useEffect(() => {
     document.title = "Home";
   });
@@ -59,7 +57,7 @@ export default function Home(){
             Find out about our mission, impact, and leadership structure.
           </p>
           <br/>
-          <Link to='our-work' className='link-button'>Learn More</Link>
+          <Link to='mission-statement' className='link-button'>Learn More</Link>
         </div>
       </div>
 

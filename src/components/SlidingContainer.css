@@ -21,9 +21,3 @@
     opacity: 1;
     transform: translateX(0); /* Slide to its natural position */
 }
-
-.sliding-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
