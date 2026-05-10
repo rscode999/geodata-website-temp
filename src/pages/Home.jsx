@@ -2,9 +2,10 @@ import {useState, useEffect, useRef } from 'react'
 import './Base.css';
 import './Home.css';
 import geodataBanner from '../assets/images/members/banner.png';
-import homeImage from '../assets/images/misc/home_image.png'
+import homeImage from '../assets/images/misc/home_group_photo.png'
+import homeTopImage from '../assets/images/misc/home_background_top.png'
 import UpcomingEvents from '../components/UpcomingEvents.jsx';
-import SlidingImage from "../components/SlidingImage.jsx";
+import SlidingContainer from "../components/SlidingContainer.jsx";
 import {Link} from "react-router-dom";
 export default function Home(){
 
@@ -20,16 +21,21 @@ export default function Home(){
   return(
     <>
     <div className='page'>
-      <div className='geoBanner'>
-        <img src = {geodataBanner} alt={'CUGeoData Banner'} className="banner"/>
+      <div style={{ backgroundImage: `url(${homeTopImage})`, minHeight: "30vh", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", display: "flex", flexDirection: "column", padding: "20px"}}>
+        <div className='geoBanner'>
+          <img src = {geodataBanner} alt={'CUGeoData Banner'}/>
+        </div>
+
+        <div className="titleHeader" style={{color: "white", WebkitTextStroke: "0.3px black"}}>
+          <p> We perform ground-breaking research on local environments and ecosystems </p>
+        </div>
       </div>
 
+      <br/>
+      <br/>
+      <br/>
 
-      <div className="titleHeader">
-        <p> We perform ground-breaking research on local environments and ecosystems </p>
-      </div>
-
-      <div className="left-aligned-text">
+      <div className="center-aligned-text">
         <p> As the Department of Earth and Atmospheric Science’s only student project team, we have the unique ability to leverage EAS resources and support combined with private funding to perform student-led research in the College of Engineering’s Project Team Program.</p>
       </div>
 
@@ -40,7 +46,9 @@ export default function Home(){
 
 
       <div className="flex-row">
-        <SlidingImage src={homeImage} alt="team image" style={{"margin-left": "50px"}}/>
+        <SlidingContainer direction='left'>
+          <img src={homeImage} alt="team image" style={{"margin-left": "50px"}}/>
+        </SlidingContainer>
 
         <div>
           <h2 className="titleHeader" style={{fontSize: "25pt"}}>Our Organization</h2>
@@ -48,7 +56,7 @@ export default function Home(){
             Find out about our mission, impact, and leadership structure.
           </p>
 
-          <Link to='teams' className='custom-button'>Learn More</Link>
+          <Link to='teams' className='link-button'>Learn More</Link>
         </div>
       </div>
 
@@ -58,7 +66,9 @@ export default function Home(){
       <br/>
 
       <div className='upcoming-events'>
-        <UpcomingEvents/>
+        <SlidingContainer direction='right'>
+          <UpcomingEvents/>
+        </SlidingContainer>
       </div>
       <div className='land-ack'>
         <p className='side-textbox'>

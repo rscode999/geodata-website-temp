@@ -29,6 +29,14 @@
     color: #E83F25;
 }
 
+
+.center-aligned-text {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
 .left-aligned-text {
     display: block;
     text-align: left;

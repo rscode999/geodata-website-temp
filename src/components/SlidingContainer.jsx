@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import './SlidingImage.css';
+import './SlidingContainer.css';
 
-export default function SlidingImage({ src, alt, className = "", style = {} }) {
+/**
+ * Any component in a `SlidingContainer`, upon rendering, will slide to the left or right.
+ * Slides from the right for `direction`="right" and from the left for `direction`="left" (or anything that's not "right").
+ */
+export default function SlidingContainer({ children, direction = 'left', className = "" }) {
     const [isVisible, setIsVisible] = useState(false);
     const domRef = useRef();
 
@@ -28,12 +32,15 @@ export default function SlidingImage({ src, alt, className = "", style = {} }) {
         };
     }, []);
 
+    // Determine which CSS class to use based on the direction prop
+    const directionClass = direction === 'right' ? 'slide-right-container' : 'slide-left-container';
+
     return (
         <div
             ref={domRef}
-            className={`slide-container ${isVisible ? 'is-visible' : ''} ${className}`}
+            className={`${directionClass} ${isVisible ? 'is-visible' : ''} ${className}`}
         >
-            <img src={src} alt={alt} className="sliding-img" style={style}/>
+            {children}
         </div>
     );
 }
