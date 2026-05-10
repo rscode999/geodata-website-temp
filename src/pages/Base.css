@@ -54,3 +54,29 @@
     margin: 0 auto 20px;
     max-width: 250px;
 }
+
+.link-button {
+    /* Layout */
+    display: inline-block;
+    padding: 10px 25px;
+
+    /* Border & Shape */
+    border: 2px solid #5786b8;
+    border-radius: 5px;
+
+    /* Text Styling */
+    color: #78a6d3 !important;
+    text-decoration: none; /* Removes the default link underline */
+    font-weight: bold;
+    font-family: sans-serif;
+
+    /* Animation */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover State: Fills the button with color */
+.link-button:hover {
+    background-color: #76a7dd;
+    color: white !important;
+}

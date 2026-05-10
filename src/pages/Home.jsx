@@ -7,6 +7,9 @@ import homeTopImage from '../assets/images/misc/home_background_top.png'
 import UpcomingEvents from '../components/UpcomingEvents.jsx';
 import SlidingContainer from "../components/SlidingContainer.jsx";
 import {Link} from "react-router-dom";
+import EventCard from "../components/EventCard.jsx";
+import upcomingEventsData from "../components/Upcoming Events Data.js";
+
 export default function Home(){
 
   const[count, setCount] = useState(0);
@@ -45,7 +48,7 @@ export default function Home(){
       <br/>
 
 
-      <div className="flex-row">
+      <div className="home-flex-row">
         <SlidingContainer direction='left'>
           <img src={homeImage} alt="team image" style={{"margin-left": "50px"}}/>
         </SlidingContainer>
@@ -55,8 +58,8 @@ export default function Home(){
           <p className='left-aligned-text'>
             Find out about our mission, impact, and leadership structure.
           </p>
-
-          <Link to='teams' className='link-button'>Learn More</Link>
+          <br/>
+          <Link to='our-work' className='link-button'>Learn More</Link>
         </div>
       </div>
 
@@ -65,17 +68,35 @@ export default function Home(){
       <br/>
       <br/>
 
-      <div className='upcoming-events'>
+      <div className='upcoming-events-banner'>
         <SlidingContainer direction='right'>
           <UpcomingEvents/>
         </SlidingContainer>
       </div>
-      <div className='land-ack'>
-        <p className='side-textbox'>
 
-        </p>
+      <div className='upcoming-events-list'>
+        {upcomingEventsData.map(event => (
+            <EventCard
+              id={event.id}
+              title={event.title}
+              date={event.date}
+              description={event.description}
+              linkText={event.linkText}
+              linkDestination={event.linkDestination}
+            />
+        ))}
       </div>
-      </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div className='land-ack' style={{marginLeft: "5%", marginRight: "5%"}}>
+      <p>Cornell University is located on the traditional homelands of the Gayogo̱hó:nǫɁ (the Cayuga Nation). The Gayogo̱hó:nǫɁ are members of the Haudenosaunee Confederacy, an alliance of six sovereign nations with a historic and contemporary presence on this land. The confederacy precedes the establishment of Cornell University, New York state and the United States of America. We acknowledge the painful history of Gayogo̱hó:nǫɁ dispossession, and honor the ongoing connection of Gayogo̱hó:nǫɁ people, past and present, to these lands and waters.</p>
+    </div>
+
     </>
   )
 }
