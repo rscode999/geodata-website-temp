@@ -7,8 +7,8 @@ import './SlidingContainer.css';
  */
 export default function SlidingContainer({ children, direction = 'left', className = "" }) {
     const [isVisible, setIsVisible] = useState(false);
-    const domRef = useRef();
 
+    const domRef = useRef();
     useEffect(() => {
         // The observer checks if the element is in the viewport
         const observer = new IntersectionObserver(

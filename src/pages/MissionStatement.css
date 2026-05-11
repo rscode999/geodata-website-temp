@@ -1,9 +1,8 @@
 .mission-header {
     font-family: 'Lora', serif;
-    padding-block: 50px;
     font-weight: bold;
     color: #254336;
-    font-size: 100px;
+    font-size: 50px;
 }
 
 
@@ -13,12 +12,30 @@
     justify-content: center;
     width: 100%;
     margin-top: 10px;
-    gap: 40px; /* Space between text and image */
+    gap: 30px;
 }
 
-/* Make the first item take 50% of the width */
+/* Make the first item take 40% of the width */
 .mission-flex-container > :first-child {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 40%;
+    max-width: 40%;
 }
+
+
+.mission-left-aligned-text {
+    display: flex;
+    text-align: left;
+    margin: 0 50px 0 50px;
+}
+
+.mission-left-aligned-text ul {
+    list-style-type: disc; /* Ensures bullets appear */
+    padding-left: 20px;
+}
+
+.mission-left-aligned-text li {
+    display: list-item;
+    margin-bottom: 10px;
+}
+
 

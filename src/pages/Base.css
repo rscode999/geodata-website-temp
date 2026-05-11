@@ -29,6 +29,14 @@
     color: #E83F25;
 }
 
+.ul {
+    list-style-type: disc; /* Ensures bullets appear */
+    padding-left: 20px;
+}
+
+.li {
+    display: list-item;
+}
 
 .center-aligned-text {
     display: block;
@@ -41,12 +49,6 @@
     display: block;
     text-align: left;
     margin: 0 120px 0 120px;
-}
-
-.left-aligned-text-large-margin {
-    display: block;
-    text-align: left;
-    margin: 0 400px 0 400px;
 }
 
 .subteam-logo-image {
@@ -79,4 +81,10 @@
 .link-button:hover {
     background-color: #76a7dd;
     color: white !important;
+}
+
+.video-link-centered {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
