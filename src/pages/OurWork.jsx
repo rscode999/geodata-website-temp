@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import './Our Work.css'
+import './OurWork.css'
 import projectData from "../components/Project Data.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 

@@ -1,3 +1,4 @@
+import {donateLink} from './NavBar.jsx'
 
 const upcomingEvents = [
     {
@@ -19,7 +20,7 @@ const upcomingEvents = [
         date: "Ongoing",
         description: "We are always accepting donations!",
         linkText: "Donate Here",
-        linkDestination: "donate",
+        linkDestination: donateLink,
     },
     {
         title: "A Celebration of Rithya",

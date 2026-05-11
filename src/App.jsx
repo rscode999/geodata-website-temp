@@ -1,22 +1,22 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
-import Home from './pages/Home.jsx'
-import Our_Work  from './pages/Our Work.jsx';
-import Recruitment from './pages/Recruitment.jsx';
-import Members from './pages/Members.jsx';
-import Donate from './pages/Donate.jsx'
-import FingerLakes from './pages/FingerLakes.jsx';
-import './App.css'
-import Layout from './components/Layout';
-import CurrentSensorData from './pages/CurrentSensorData.jsx';
-import Data from './pages/Data.jsx';
-import Water from './pages/Water.jsx';
-import Air from  './pages/Air.jsx';
-import Tech from './pages/Tech.jsx';
-import Rock from './pages/Rock.jsx';
-import Business from './pages/Business.jsx';
-import MissionStatement from "./pages/MissionStatement.jsx";
+import {useState} from 'react'
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
+import './App.css';
+
+import Air from './pages/subteams/Air.jsx';
+import Business from './pages/subteams/Business.jsx';
+import CurrentSensorData from './pages/subteams/CurrentSensorData.jsx';
+import Data from './pages/subteams/Data.jsx';
+import Home from './pages/Home.jsx';
+import Layout from './components/Layout';
+import Members from './pages/Members.jsx';
+import MissionStatement from "./pages/MissionStatement.jsx";
+import Our_Work from './pages/OurWork.jsx';
+import Recruitment from './pages/Recruitment.jsx';
+import Rock from './pages/subteams/Rock.jsx';
+import Sponsorships from './pages/Sponsorships.jsx';
+import Tech from './pages/subteams/Tech.jsx';
+import Water from './pages/subteams/Water.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,23 +26,20 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="our-work" element={<Our_Work />}>
-            <Route path="finger-lakes" element={<FingerLakes />} />
-          </Route>
-          <Route path="teams" element={<Air />} />
-          <Route path="recruitment" element={<Recruitment />} />
-          <Route path="members" element={<Members />} />
-          <Route path="donate" element={<Donate />} />
+          <Route path="air" element={<Air />} />
+          <Route path="business" element={<Business />} />
           <Route path="current-sensor-data" element={<CurrentSensorData />} />
           <Route path="data" element={<Data />} />
-          <Route path="water" element={<Water />} />
-          <Route path="air" element={<Air />} />
-          <Route path="tech" element={<Tech />} />
+          <Route path="members" element={<Members />} />
+          <Route path="mission-statement" element={<MissionStatement />} />
+          <Route path="our-work" element={<Our_Work />} />
+          <Route path="recruitment" element={<Recruitment />} />
           <Route path="rock" element={<Rock />} />
-          <Route path="business" element={<Business />} />
-          {/*<Route path="snipe-challenge" element={<SnipeChallenge/>} />*/}
+          <Route path="sponsorships" element={<Sponsorships />} />
+          <Route path="teams" element={<Air />} />
+          <Route path="tech" element={<Tech />} />
+          <Route path="water" element={<Water />} />
           <Route path="*" element={<Home />} />
-          <Route path="mission-statement" element={<MissionStatement/>} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,18 +1,21 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../components/Project Data.js";
-import ProjectCard from "../components/ProjectCard.jsx";
-import teamMembers from "../components/Member Data.js";
-import MemberCard from "../components/MemberCard.jsx";
-import {Link} from "react-router-dom";
-import dataLogo from "../assets/images/subteam_logos/data.jpeg";
+import projectData from "../../components/Project Data.js";
+import ProjectCard from "../../components/ProjectCard.jsx";
+import teamMembers from "../../components/Member Data.js";
+import MemberCard from "../../components/MemberCard.jsx";
+import waterLogo from "../../assets/images/logos/water.jpg";
 
-
-export default function Rock(){
-    const TEAM_NAME = "Data";
+export default function Water(){
+    const TEAM_NAME = "Water"
 
     useEffect(() => {
-        document.title = 'Data';
+        document.title = 'Water';
     });
+
+    //filters for team keyword
+    function chooseTeam (teamMembers, keyword) {
+        return ((teamMembers.filter(member => member.role.includes(keyword))))
+    }
 
     const handleActivate = (memberId) => {
         setActiveCardId(prevId => (prevId === memberId ? null : memberId));
@@ -41,13 +44,13 @@ export default function Rock(){
                 setActiveCardId(null);
             }
         }}>
-            <h1 className='titleHeader'>Data Team</h1>
+            <h1 className='titleHeader'>Water Team</h1>
 
-            <img className='subteam-logo-image' src={dataLogo} alt='Data Team Logo'/>
+            <img className='subteam-logo-image' src={waterLogo} alt='Water Team Logo'/>
 
-            <p className='left-aligned-text-large-margin'>Data Subteam collects and displays the findings from other subteams. They're the subteam that created this website!</p>
-            <p className='left-aligned-text-large-margin'>Their current lead, Rithya, *THINKS* she's cute, but is in fact delulu.</p>
-            <Link to='/current-sensor-data' className='left-aligned-text-large-margin'>See our current sensor data here!</Link>
+            <p className='left-aligned-text'>The Water subteam does projects relating to streams and lakes. They are particularly interested in Cayuga Lake, the nearest large body of water to Cornell University.</p>
+            <p className='left-aligned-text'>They deploy equipment such as buoys, depth sounders, and thermometers.</p>
+            <p className='left-aligned-text'>Don't worry if you dislike swimming- the Water team will be happy to welcome you!</p>
 
             <h2 className='subheading'>Current Projects</h2>
             <div className = "member-cards">

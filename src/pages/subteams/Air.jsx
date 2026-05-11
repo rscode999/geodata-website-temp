@@ -1,16 +1,21 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../components/Project Data.js";
-import ProjectCard from "../components/ProjectCard.jsx";
-import teamMembers from "../components/Member Data.js";
-import MemberCard from "../components/MemberCard.jsx";
-import rockLogo from "../assets/images/subteam_logos/rock.jpg";
+import projectData from "../../components/Project Data.js";
+import ProjectCard from "../../components/ProjectCard.jsx";
+import teamMembers from "../../components/Member Data.js";
+import MemberCard from "../../components/MemberCard.jsx";
+import airLogo from '../../assets/images/logos/air.jpg';
 
-export default function Rock(){
-  const TEAM_NAME = "Rock";
+export default function Air(){
+  const TEAM_NAME = "Air";
 
   useEffect(() => {
-    document.title = 'Rock';
+    document.title = 'Air';
   });
+
+  //filters for team keyword
+  function chooseTeam (teamMembers, keyword) {
+    return ((teamMembers.filter(member => member.role.includes(keyword))))
+  }
 
   const handleActivate = (memberId) => {
     setActiveCardId(prevId => (prevId === memberId ? null : memberId));
@@ -19,7 +24,8 @@ export default function Rock(){
   const [activeCardId, setActiveCardId] = useState(null);
   const teamContainerRef = useRef(null);
 
-  const subteamProjectCards = projectData.filter(proj => proj.subteam.includes(TEAM_NAME))
+
+  const subteamProjectCards = projectData.filter(proj => proj.subteam.includes('Air'))
       .map(proj => (
           <ProjectCard
               id={proj.id}
@@ -32,26 +38,26 @@ export default function Rock(){
           />
       ));
 
-
   return(
       <div onClick={(e) => {
         if (e.target === teamContainerRef.current) {
           setActiveCardId(null);
         }
       }}>
-        <h1 className='titleHeader'>Rock Team</h1>
+        <h1 className='titleHeader'>Air Team</h1>
 
-        <img className='subteam-logo-image' src={rockLogo} alt='Rock Team Logo'/>
+        <img className='subteam-logo-image' src={airLogo} alt='Air Team Logo'/>
 
-        <p className='left-aligned-text-large-margin'>Rock Subteam is responsible for ground-based research. They often venture off campus to collect samples on weekends.</p>
+        <p className='left-aligned-text'>The Air Subteam specializes in atmospheric research. Wind speed, precipitation patterns, and upper-atmospheric work are typical research topics for this subteam.</p>
+        <p className='left-aligned-text'>As one of Geodata's largest subteams, the Air team is as energetic as the atmosphere itself.</p>
 
         <h2 className='subheading'>Current Projects</h2>
         <div className = "member-cards">
           <div className= 'teamContainerRef'>
             {
-            (subteamProjectCards.length > 0)
-            ? subteamProjectCards
-            : <p>No current projects</p>
+              (subteamProjectCards.length > 0)
+                  ? subteamProjectCards
+                  : <p>No current projects</p>
             }
           </div>
         </div>

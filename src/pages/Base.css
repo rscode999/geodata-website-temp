@@ -9,9 +9,13 @@
 .titleHeader{
     font-family: 'Lora', serif;
     padding-block: 20px;
+    text-align: center;
     font-weight: bold;
     color: #254336;
     font-size: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow-wrap: break-word;
 }
 
 /*links*/
@@ -51,6 +55,12 @@
     margin: 0 120px 0 120px;
 }
 
+.left-aligned-text-large-margin {
+    display: block;
+    text-align: left;
+    margin: 0 240px 0 240px;
+}
+
 .subteam-logo-image {
     display: block;
     margin: 0 auto 20px;
@@ -58,21 +68,17 @@
 }
 
 .link-button {
-    /* Layout */
     display: inline-block;
     padding: 10px 25px;
 
-    /* Border & Shape */
     border: 2px solid #5786b8;
     border-radius: 5px;
 
-    /* Text Styling */
     color: #78a6d3 !important;
-    text-decoration: none; /* Removes the default link underline */
+    text-decoration: none;
     font-weight: bold;
     font-family: sans-serif;
 
-    /* Animation */
     transition: all 0.3s ease;
     cursor: pointer;
 }

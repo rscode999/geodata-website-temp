@@ -1,16 +1,15 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../components/Project Data.js";
-import ProjectCard from "../components/ProjectCard.jsx";
-import teamMembers from "../components/Member Data.js";
-import MemberCard from "../components/MemberCard.jsx";
-import techLogo from "../assets/images/subteam_logos/tech.png";
+import projectData from "../../components/Project Data.js";
+import ProjectCard from "../../components/ProjectCard.jsx";
+import teamMembers from "../../components/Member Data.js";
+import MemberCard from "../../components/MemberCard.jsx";
+import rockLogo from "../../assets/images/logos/rock.jpg";
 
-
-export default function Tech(){
-  const TEAM_NAME = "Tech";
+export default function Rock(){
+  const TEAM_NAME = "Rock";
 
   useEffect(() => {
-    document.title = 'Tech';
+    document.title = 'Rock';
   });
 
   const handleActivate = (memberId) => {
@@ -40,20 +39,19 @@ export default function Tech(){
           setActiveCardId(null);
         }
       }}>
-        <h1 className='titleHeader'>Tech Team</h1>
+        <h1 className='titleHeader'>Rock Team</h1>
 
-        <img className='subteam-logo-image' src={techLogo} alt='Tech Team Logo'/>
+        <img className='subteam-logo-image' src={rockLogo} alt='Rock Team Logo'/>
 
-        <p className='left-aligned-text'>The Tech Team is Geodata's support arm. A small and tight-knit team, Tech builds custom parts for other subteams, such as parts for weather stations and sensors.</p>
-        <p className='left-aligned-text'>They often use 3D printers, Arduinos, soldering sets, and lots of duct tape to build their creations.</p>
+        <p className='left-aligned-text-large-margin'>Rock Subteam is responsible for ground-based research. They often venture off campus to collect samples on weekends.</p>
 
         <h2 className='subheading'>Current Projects</h2>
         <div className = "member-cards">
           <div className= 'teamContainerRef'>
             {
-              (subteamProjectCards.length > 0)
-                  ? subteamProjectCards
-                  : <p>No current projects</p>
+            (subteamProjectCards.length > 0)
+            ? subteamProjectCards
+            : <p>No current projects</p>
             }
           </div>
         </div>

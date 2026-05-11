@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef } from 'react'
 import './Base.css';
 import './Home.css';
-import geodataBanner from '../assets/images/members/banner.png';
+import geodataBanner from '../assets/images/logos/banner.png';
 import homeImage from '../assets/images/misc/home_group_photo.png'
 import homeTopImage from '../assets/images/misc/home_background_top.png'
 import UpcomingEvents from '../components/UpcomingEvents.jsx';
@@ -22,7 +22,7 @@ export default function Home(){
   return(
     <>
     <div className='page'>
-      <div style={{ backgroundImage: `url(${homeTopImage})`, minHeight: "30vh", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center", display: "flex", flexDirection: "column", padding: "20px"}}>
+      <div className='home-header' style={{backgroundImage: `url(${homeTopImage})`}}>
         <div className='geoBanner'>
           <img src = {geodataBanner} alt={'CUGeoData Banner'}/>
         </div>
@@ -47,8 +47,8 @@ export default function Home(){
 
 
       <div className="home-flex-row">
-        <SlidingContainer direction='left'>
-          <img src={homeImage} alt="team image" style={{"margin-left": "50px"}}/>
+        <SlidingContainer direction='left' >
+          <img src={homeImage} alt="team image" className='home-image'/>
         </SlidingContainer>
 
         <div>

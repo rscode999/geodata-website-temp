@@ -1,0 +1,19 @@
+.sponsorships-flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.sponsorships-banner-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sponsorships-banner {
+    max-height: 200px;
+    width: auto;
+}

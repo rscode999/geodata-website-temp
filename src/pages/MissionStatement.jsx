@@ -12,7 +12,8 @@ export default function MissionStatement(){
 
     useEffect(() => {
         document.title = "Our Mission";
-    });
+        window.scrollTo(0, 0); //Enters the page at the top
+    }, []);
 
 
     return(
