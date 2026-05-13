@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import './Base.css';
 import './Recruitment.css';
-import teamPhoto from '../assets/images/members/teamphoto.png';
+import SlidingContainer from "../components/SlidingContainer.jsx";
+import RevealContainer from "../components/RevealContainer.jsx";
 
 function FAQItem({ question, children }) {
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ function FAQItem({ question, children }) {
       >
         <span>{question}</span>
         <span className={`faq-icon ${open ? 'open' : ''}`} aria-hidden="true">
-          ▾
+          {open ? '▾' : '▸'}
         </span>
       </button>
 
@@ -57,52 +58,56 @@ export default function Recruitment() {
     <>
       <div className='page'>
         <div className='team-photo'>
-          <div className='info-box'>
-            <h1 className='titleHeader'>Recruitment</h1>
-            <p>
-              Thank you for your interest in CU Geodata! We recently began our recruitment process for the Fall 2026 semester! Below you can find a link to our team application, which includes a set of short questions to learn more about you. We also hold{" "}
-              <a
-                href="https://docs.google.com/spreadsheets/d/1tklDgxedBnjQK8MM15cmxKWhptDZjEs686E5T4I5IoE/edit?gid=1607338661#gid=1607338661"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                coffee chats
-              </a>{" "}
-              if you want to learn more about us! Please note that the{" "}
-              <b className='gpta'> General Project Team Application </b>
-              must be completed in addition to the CU GeoData Application.
-            </p>
-            <p>
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSf-hJH-No53xT1Wx4IZA_eUKRsOpr_6ME9ks5nx4YTBbquT0A/closedform"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CU GeoData Application Form
-              </a>
-            </p>
-            <p>
-              <a
-                href="https://cornell.ca1.qualtrics.com/jfe/form/SV_cuXl2vYgb5sNPWS"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                General Project Team Application
-              </a>
-            </p>
-          </div>
+          <SlidingContainer>
+            <div className='info-box'>
+              <h1 className='titleHeader'>Recruitment</h1>
+              <p>
+                Thank you for your interest in CU Geodata! We recently began our recruitment process for the Fall 2026 semester! Below you can find a link to our team application, which includes a set of short questions to learn more about you. We also hold{" "}
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1tklDgxedBnjQK8MM15cmxKWhptDZjEs686E5T4I5IoE/edit?gid=1607338661#gid=1607338661"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  coffee chats
+                </a>{" "}
+                if you want to learn more about us! Please note that the{" "}
+                <b className='gpta'> General Project Team Application </b>
+                must be completed in addition to the CU GeoData Application.
+              </p>
+              <p>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf-hJH-No53xT1Wx4IZA_eUKRsOpr_6ME9ks5nx4YTBbquT0A/closedform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CU GeoData Application Form
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://cornell.ca1.qualtrics.com/jfe/form/SV_cuXl2vYgb5sNPWS"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  General Project Team Application
+                </a>
+              </p>
+            </div>
+          </SlidingContainer>
         </div>
 
         <div className='info-box'>
           <h1 className='titleHeader'>FAQ's</h1>
-          <p>Here are some commonly asked questions about GeoData:</p><br/>
+          <p style={{fontWeight: "bold"}}>Here are some commonly asked questions about GeoData:</p><br/>
 
           <div className="faq-list">
-            {faqs.map((item, idx) => (
-              <FAQItem key={idx} question={item.q}>
-                <p>{item.a}</p><br/>
-              </FAQItem>
-            ))}
+            <RevealContainer delay={100}>
+              {faqs.map((item, idx) => (
+                <FAQItem key={idx} question={item.q}>
+                  <p>{item.a}</p>
+                </FAQItem>
+              ))}
+            </RevealContainer>
           </div>
         </div>
       </div>

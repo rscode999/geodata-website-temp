@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import './OurWork.css'
-import projectData from "../components/Project Data.js";
+import projectData from "../components/ProjectData.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 
 export default function Our_Work() {

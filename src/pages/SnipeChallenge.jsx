@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import snipes from "../components/Snipe Data.js";
+import snipes from "../components/SnipeData.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 export default function SnipeChallenge(){
 

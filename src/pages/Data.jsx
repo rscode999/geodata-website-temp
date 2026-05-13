@@ -1,10 +1,10 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../../components/Project Data.js";
-import ProjectCard from "../../components/ProjectCard.jsx";
-import teamMembers from "../../components/Member Data.js";
-import MemberCard from "../../components/MemberCard.jsx";
+import projectData from "../components/ProjectData.js";
+import ProjectCard from "../components/ProjectCard.jsx";
+import teamMembers from "../components/MemberData.js";
+import MemberCard from "../components/MemberCard.jsx";
 import {Link} from "react-router-dom";
-import dataLogo from "../../assets/images/logos/data.jpeg";
+import dataLogo from "../assets/images/logos/data.jpeg";
 
 
 export default function Rock(){
@@ -45,9 +45,9 @@ export default function Rock(){
 
             <img className='subteam-logo-image' src={dataLogo} alt='Data Team Logo'/>
 
-            <p className='left-aligned-text-large-margin'>Data Subteam collects and displays the findings from other subteams. They're the subteam that created this website!</p>
-            <p className='left-aligned-text-large-margin'>Their current lead, Rithya, *THINKS* she's cute, but is in fact delulu.</p>
-            <Link to='/current-sensor-data' className='left-aligned-text-large-margin'>See our current sensor data here!</Link>
+            <p className='center-aligned-text'>Data Subteam collects and displays the findings from other subteams. They're the subteam that created this website!</p>
+            <p className='center-aligned-text'>Their current lead, Rithya, *THINKS* she's cute, but is in fact delulu.</p>
+            <Link to='/current-sensor-data' className='center-aligned-text'>See our current sensor data here!</Link>
 
             <h2 className='subheading'>Current Projects</h2>
             <div className = "member-cards">
@@ -69,7 +69,7 @@ export default function Rock(){
                             key={member.id}
                             id={member.id}
                             name={member.name}
-                            role={member.role.replace(TEAM_NAME, "")}
+                            role={member.role}
                             photo={member.photo}
                             bio={member.bio}
                             netid={member.netid}

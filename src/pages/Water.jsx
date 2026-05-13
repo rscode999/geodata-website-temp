@@ -1,17 +1,21 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../../components/Project Data.js";
-import ProjectCard from "../../components/ProjectCard.jsx";
-import teamMembers from "../../components/Member Data.js";
-import MemberCard from "../../components/MemberCard.jsx";
-import businessLogo from '../../assets/images/logos/business.png';
+import projectData from "../components/ProjectData.js";
+import ProjectCard from "../components/ProjectCard.jsx";
+import teamMembers from "../components/MemberData.js";
+import MemberCard from "../components/MemberCard.jsx";
+import waterLogo from "../assets/images/logos/water.jpg";
 
-export default function Business(){
-    const TEAM_NAME = "Business";
+export default function Water(){
+    const TEAM_NAME = "Water"
 
     useEffect(() => {
-        document.title = 'Business';
+        document.title = 'Water';
     });
 
+    //filters for team keyword
+    function chooseTeam (teamMembers, keyword) {
+        return ((teamMembers.filter(member => member.role.includes(keyword))))
+    }
 
     const handleActivate = (memberId) => {
         setActiveCardId(prevId => (prevId === memberId ? null : memberId));
@@ -19,7 +23,6 @@ export default function Business(){
 
     const [activeCardId, setActiveCardId] = useState(null);
     const teamContainerRef = useRef(null);
-
 
     const subteamProjectCards = projectData.filter(proj => proj.subteam.includes(TEAM_NAME))
         .map(proj => (
@@ -34,18 +37,20 @@ export default function Business(){
             />
         ));
 
+
     return(
         <div onClick={(e) => {
             if (e.target === teamContainerRef.current) {
                 setActiveCardId(null);
             }
         }}>
-            <h1 className='titleHeader'>Business Team</h1>
+            <h1 className='titleHeader'>Water Team</h1>
 
-            <img className='subteam-logo-image' src={businessLogo} alt='Business Team Logo'/>
+            <img className='subteam-logo-image' src={waterLogo} alt='Water Team Logo'/>
 
-            <p className='left-aligned-text-large-margin' style={{marginLeft: "400px", marginRight: "300px"}}>The Business team is responsible for securing funding from Cornell and external donors.</p>
-            <p className='left-aligned-text-large-margin' style={{marginLeft: "400px", marginRight: "300px"}}>They also doubled as web developers in Spring 2026, so they're simply the best subteam.</p>
+            <p className='center-aligned-text'>The Water subteam does projects relating to streams and lakes. They are particularly interested in Cayuga Lake, the nearest large body of water to Cornell University.</p>
+            <p className='center-aligned-text'>They deploy equipment such as buoys, depth sounders, and thermometers.</p>
+            <p className='center-aligned-text'>Don't worry if you dislike swimming- the Water team will be happy to welcome you!</p>
 
             <h2 className='subheading'>Current Projects</h2>
             <div className = "member-cards">
@@ -67,7 +72,7 @@ export default function Business(){
                             key={member.id}
                             id={member.id}
                             name={member.name}
-                            role={member.role.replace(TEAM_NAME, "")}
+                            role={member.role}
                             photo={member.photo}
                             bio={member.bio}
                             netid={member.netid}

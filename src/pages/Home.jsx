@@ -8,7 +8,7 @@ import UpcomingEvents from '../components/UpcomingEvents.jsx';
 import SlidingContainer from "../components/SlidingContainer.jsx";
 import {Link} from "react-router-dom";
 import EventCard from "../components/EventCard.jsx";
-import upcomingEventsData from "../components/Upcoming Events Data.js";
+import upcomingEventsData from "../components/UpcomingEventsData.js";
 
 export default function Home(){
 
@@ -27,7 +27,7 @@ export default function Home(){
           <img src = {geodataBanner} alt={'CUGeoData Banner'}/>
         </div>
 
-        <div className="titleHeader" style={{color: "white", WebkitTextStroke: "0.3px black"}}>
+        <div className="titleHeader" style={{color: "white", WebkitTextStroke: "0.3px black", fontSize: "35px"}}>
           <p> We perform ground-breaking research on local environments and ecosystems </p>
         </div>
       </div>

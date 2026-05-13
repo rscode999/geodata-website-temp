@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import MemberCard from '../components/MemberCard';
-import teamMembers from '../components/Member Data'
+import teamMembers from '../components/MemberData.js'
 import './Members.css'
 
 

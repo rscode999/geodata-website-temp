@@ -1,9 +1,9 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../../components/Project Data.js";
-import ProjectCard from "../../components/ProjectCard.jsx";
-import teamMembers from "../../components/Member Data.js";
-import MemberCard from "../../components/MemberCard.jsx";
-import rockLogo from "../../assets/images/logos/rock.jpg";
+import projectData from "../components/ProjectData.js";
+import ProjectCard from "../components/ProjectCard.jsx";
+import teamMembers from "../components/MemberData.js";
+import MemberCard from "../components/MemberCard.jsx";
+import rockLogo from "../assets/images/logos/rock.jpg";
 
 export default function Rock(){
   const TEAM_NAME = "Rock";
@@ -43,7 +43,7 @@ export default function Rock(){
 
         <img className='subteam-logo-image' src={rockLogo} alt='Rock Team Logo'/>
 
-        <p className='left-aligned-text-large-margin'>Rock Subteam is responsible for ground-based research. They often venture off campus to collect samples on weekends.</p>
+        <p className='center-aligned-text'>Rock Subteam is responsible for ground-based research. They often venture off campus to collect samples on weekends.</p>
 
         <h2 className='subheading'>Current Projects</h2>
         <div className = "member-cards">
@@ -65,7 +65,7 @@ export default function Rock(){
                       key={member.id}
                       id={member.id}
                       name={member.name}
-                      role={member.role.replace(TEAM_NAME, "")}
+                      role={member.role}
                       photo={member.photo}
                       bio={member.bio}
                       netid={member.netid}

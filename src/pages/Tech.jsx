@@ -1,21 +1,17 @@
 import {useState, useEffect, useRef} from 'react'
-import projectData from "../../components/Project Data.js";
-import ProjectCard from "../../components/ProjectCard.jsx";
-import teamMembers from "../../components/Member Data.js";
-import MemberCard from "../../components/MemberCard.jsx";
-import airLogo from '../../assets/images/logos/air.jpg';
+import projectData from "../components/ProjectData.js";
+import ProjectCard from "../components/ProjectCard.jsx";
+import teamMembers from "../components/MemberData.js";
+import MemberCard from "../components/MemberCard.jsx";
+import techLogo from "../assets/images/logos/tech.png";
 
-export default function Air(){
-  const TEAM_NAME = "Air";
+
+export default function Tech(){
+  const TEAM_NAME = "Tech";
 
   useEffect(() => {
-    document.title = 'Air';
+    document.title = 'Tech';
   });
-
-  //filters for team keyword
-  function chooseTeam (teamMembers, keyword) {
-    return ((teamMembers.filter(member => member.role.includes(keyword))))
-  }
 
   const handleActivate = (memberId) => {
     setActiveCardId(prevId => (prevId === memberId ? null : memberId));
@@ -24,8 +20,7 @@ export default function Air(){
   const [activeCardId, setActiveCardId] = useState(null);
   const teamContainerRef = useRef(null);
 
-
-  const subteamProjectCards = projectData.filter(proj => proj.subteam.includes('Air'))
+  const subteamProjectCards = projectData.filter(proj => proj.subteam.includes(TEAM_NAME))
       .map(proj => (
           <ProjectCard
               id={proj.id}
@@ -38,18 +33,19 @@ export default function Air(){
           />
       ));
 
+
   return(
       <div onClick={(e) => {
         if (e.target === teamContainerRef.current) {
           setActiveCardId(null);
         }
       }}>
-        <h1 className='titleHeader'>Air Team</h1>
+        <h1 className='titleHeader'>Tech Team</h1>
 
-        <img className='subteam-logo-image' src={airLogo} alt='Air Team Logo'/>
+        <img className='subteam-logo-image' src={techLogo} alt='Tech Team Logo'/>
 
-        <p className='left-aligned-text'>The Air Subteam specializes in atmospheric research. Wind speed, precipitation patterns, and upper-atmospheric work are typical research topics for this subteam.</p>
-        <p className='left-aligned-text'>As one of Geodata's largest subteams, the Air team is as energetic as the atmosphere itself.</p>
+        <p className='center-aligned-text'>The Tech Team is Geodata's support arm. A small and tight-knit team, Tech builds custom parts for other subteams, such as parts for weather stations and sensors.</p>
+        <p className='center-aligned-text-text'>They often use 3D printers, Arduinos, soldering sets, and lots of duct tape to build their creations.</p>
 
         <h2 className='subheading'>Current Projects</h2>
         <div className = "member-cards">
@@ -71,7 +67,7 @@ export default function Air(){
                       key={member.id}
                       id={member.id}
                       name={member.name}
-                      role={member.role.replace(TEAM_NAME, "")}
+                      role={member.role}
                       photo={member.photo}
                       bio={member.bio}
                       netid={member.netid}

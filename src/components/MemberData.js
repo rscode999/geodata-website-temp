@@ -126,10 +126,10 @@ const teamMembers = [{
     {
         id: 13,
         name: 'Reece Shiraishi',
-        role: 'Business Team Member',
+        role: 'Business/Data Team Member',
         netid: 'rcs374',
         photo: gigachadHeadshot,
-        bio: 'Reece is a total gigachad.',//'Reece (class of 2027, ECE) is involved in IEEE and Cornell Entertainment Engineering and Design. He enjoys weightlifting, coding, and eating bacon omelets in Morrison Dining.',
+        bio: "Reece is a total gigachad. He stole Data Team's website with his sheer awesomeness.",//'Reece (class of 2027, ECE) is involved in IEEE and Cornell Entertainment Engineering and Design. He enjoys weightlifting, coding, and eating bacon omelets in Morrison Dining.',
         coffee: false
     },
     {

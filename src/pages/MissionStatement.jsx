@@ -92,8 +92,8 @@ export default function MissionStatement(){
                         talks of climate change and ecological footprints, CU GeoData digs deep into the science of
                         these issues. Our team focuses on designing, building and deploying instrumentation capable of
                         recording a large variety of atmospheric, geologic, and hydrological data. With projects ranging
-                        from harmful algal bloom (HABs) detection to solar-powered soil monitoring to measuring the
-                        effects of air pollutants on Ithaca’s air quality, we aim to better understand crucial aspects
+                        from harmful algal bloom (HABs) detection to solar-powered soil monitoring to making rithya's hair poofy to
+                        measuring the effects of air pollutants on Ithaca’s air quality, we aim to better understand crucial aspects
                         of our environment and shared planet.</p>
                 </div>
 

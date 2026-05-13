@@ -123,7 +123,7 @@ export default function CurrentSensorData() {
   if (loading) {
     return (
       <div className="page">
-        <h1 className="titleHeader">Data</h1>
+        <h1 className="titleHeader">Live Sensor Data</h1>
         <p>Loading sensor data…</p>
       </div>
     );
@@ -131,7 +131,7 @@ export default function CurrentSensorData() {
 
   return (
     <div className="page">
-      <h1 className="titleHeader">Data</h1>
+      <h1 className="titleHeader">Live Sensor Data</h1>
 
       {/* Metric Toggle */}
       <div className="mt-2 px-3 pb-3 flex flex-wrap items-center gap-2">
