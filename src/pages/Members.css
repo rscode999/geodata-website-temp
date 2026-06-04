@@ -1,9 +1,10 @@
 .teamContainerRef{
-    width: 100%;
+    width: 88%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
     gap: 4rem;
     padding-block: 2rem;
     background-color: #D9EAFD;
@@ -13,17 +14,11 @@
     padding-bottom: 5rem;
 }
 
+
 .subheading{
-    font-family: 'Lora', serif;
+    font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
     padding-top: 2rem;
     color: #086a49;
-    font-size: 20px;
-}
-
-.subheading-projects{
-    font-family: 'Lora', serif;
-    font-weight: bold;
-    padding-top: 2rem;
-    font-size: 20px;
+    font-size: 35px;
 }

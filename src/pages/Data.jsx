@@ -47,7 +47,7 @@ export default function Rock(){
 
             <p className='center-aligned-text'>Data Subteam collects and displays the findings from other subteams. They're the subteam that created this website!</p>
             <p className='center-aligned-text'>Their current lead, Rithya, *THINKS* she's cute, but is in fact delulu.</p>
-            <Link to='/current-sensor-data' className='center-aligned-text'>See our current sensor data here!</Link>
+            <Link to='/current-sensor-data' className='center-aligned-text'><u>See our current sensor data here!</u></Link>
 
             <h2 className='subheading'>Current Projects</h2>
             <div className = "member-cards">

@@ -27,7 +27,7 @@ export default function Home(){
           <img src = {geodataBanner} alt={'CUGeoData Banner'}/>
         </div>
 
-        <div className="titleHeader" style={{color: "white", WebkitTextStroke: "0.3px black", fontSize: "35px"}}>
+        <div className="titleHeader" style={{color: "white", WebkitTextStroke: "0.3px black", fontSize: "40px"}}>
           <p> We perform ground-breaking research on local environments and ecosystems </p>
         </div>
       </div>

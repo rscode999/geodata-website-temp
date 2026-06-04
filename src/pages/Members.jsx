@@ -52,9 +52,9 @@ export default function Members() {
             setActiveCardId(null);
           }
         }}>
-      <h1 className='titleHeader'>Members</h1>
+      <h1 className='titleHeader' style={{fontSize: '50px'}}>Members</h1>
       <div className = "member-cards">
-      <h2 className = 'subheading'> Subteam Leads </h2>
+      <h2 className = 'subheading'> Subteam Leads</h2>
         <div className= 'teamContainerRef' >
           {teamMembers
             .filter(member => member.role.includes('Lead'))

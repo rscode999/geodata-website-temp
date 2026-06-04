@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import './MemberCard.css';
 
 const MemberCard = ({ id, name, role, photo, bio, netid, coffee, isActive, onActivate }) => {
